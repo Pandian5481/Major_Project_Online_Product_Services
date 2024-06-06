@@ -40,7 +40,7 @@ const Delivery=()=>{
     useEffect(() => {
         const fetchOrderedProducts = async () => {
             try {
-                const response = await axios.get(`${URL}/getorderedproducts`);
+                const response = await axios.get(`https://auzm.vercel.app/getorderedproducts`);
                 console.log(response.data.orderedProducts);
                 setorderedProducts(response.data.orderedProducts);
             } catch (error) {

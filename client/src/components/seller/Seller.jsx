@@ -106,10 +106,10 @@ const Seller = () => {
                 setMyShops([]); // Reset MyShops to an empty array
                 setPendingShops([]); // Reset PendingShops to an empty array
 
-                const responseMyShops = await axios.get(`${URL}/myshops/${userName}`);
+                const responseMyShops = await axios.get(`https://auzm.vercel.app/myshops/${userName}`);
                 setMyShops(responseMyShops.data.myShopData);
                 //console.log(responseMyShops.data.myShopData);
-                const responsePendingShops = await axios.get(`${URL}/pendingshops/${userName}`);
+                const responsePendingShops = await axios.get(`https://auzm.vercel.app/pendingshops/${userName}`);
                 setPendingShops(responsePendingShops.data.myShopData);
             } catch (error) {
                 console.error("Error fetching shops:", error);

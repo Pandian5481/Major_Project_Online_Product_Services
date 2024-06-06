@@ -1,4 +1,4 @@
-
+/*
 import paytmchecksum from '../paytm/PaytmChecksum.js';
 import { paytmParams,paytmMerchantKey } from '../index.js';
 
@@ -64,4 +64,4 @@ export const paytmResponse=(request,response)=>{
     else{
         console.log('Checksum mismatched');
     }
-}
+}*/

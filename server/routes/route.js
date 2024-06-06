@@ -29,8 +29,8 @@ router.post('/postorderedproducts',postOrderedProducts);
 router.post('/acceptorder',acceptOrderShop);
 router.post('/deletefromorederedproducts',deleteFromOrderedProducts);
 
-router.post('/payment',addPaymentGateway);
-router.post('/callback',paytmResponse);
+/*router.post('/payment',addPaymentGateway);
+router.post('/callback',paytmResponse);*/
 
 router.post('/registershop',userShop);
 

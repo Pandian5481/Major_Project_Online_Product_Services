@@ -32,7 +32,7 @@ app.listen(PORT,()=>{
 
 DefaultData();
 
-export const paytmMerchantKey = process.env.PAYTM_MERCHANT_KEY;
+/*export const paytmMerchantKey = process.env.PAYTM_MERCHANT_KEY;
 export const paytmParams = {
     MID: process.env.PAYTM_MID,
     WEBSITE: process.env.PAYTM_WEBSITE,
@@ -44,4 +44,4 @@ export const paytmParams = {
     CALLBACK_URL: 'http://localhost:8000/callback',
     EMAIL: 'ankitsn999@gmail.com',
     MOBILE_NO: '1234567890',
-};
+};*/

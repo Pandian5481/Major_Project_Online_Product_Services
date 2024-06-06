@@ -62,7 +62,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchPendingShops = async () => {
       try {
-        const response = await axios.get(`${URL}/allpendingshops`);
+        const response = await axios.get(`https://auzm.vercel.app/allpendingshops`);
         const flattenedShops = response.data.shops.flatMap(shopData => shopData.shops);        
         setPendingShops(flattenedShops);
       } catch (error) {
@@ -74,7 +74,7 @@ const Admin = () => {
 
   const approveShop = async (shopId) => {
     try {
-      await axios.put(`${URL}/approveShop/${shopId}`);
+      await axios.put(`https://auzm.vercel.app/approveShop/${shopId}`);
       setPendingShops(prevShops => prevShops.filter(shop => shop._id !== shopId));
     } catch (error) {
       console.error("Error approving shop:", error);

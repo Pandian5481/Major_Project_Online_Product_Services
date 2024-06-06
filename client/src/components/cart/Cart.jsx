@@ -83,7 +83,7 @@ const Cart=()=>{
     //console.log(orderProductData); // This should show the order product data correctly
   
     try {
-      let res = await axios.post(`${URL}/postorderedproducts`, orderProductData);
+      let res = await axios.post(`https://auzm.vercel.app/postorderedproducts`, orderProductData);
       console.log(res.data); // Check the response from the server
   
       let response = await payUsingPaytm({ amount: 500, email: 'ankit@gmail.com' });

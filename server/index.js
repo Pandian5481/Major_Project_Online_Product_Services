@@ -18,6 +18,9 @@ app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/',router);
+app.get('/',(req,res)=>{
+    res.send("My service is live");
+})
 
 const PORT=8000;
 

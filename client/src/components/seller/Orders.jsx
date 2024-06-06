@@ -33,7 +33,7 @@ const Orders = () => {
     useEffect(() => {
         const fetchMyShops = async () => {
             try {
-                const responseMyShops = await axios.get(`${URL}/myshops/${userName}`);
+                const responseMyShops = await axios.get(`https://auzm.vercel.app/myshops/${userName}`);
                 setMyShops(responseMyShops.data.myShopData);
                 //console.log(responseMyShops.data.myShopData);
             } catch (error) {
@@ -43,7 +43,7 @@ const Orders = () => {
 
         const fetchOrderedProducts = async () => {
             try {
-                const response = await axios.get(`${URL}/getorderedshopproducts`);
+                const response = await axios.get(`https://auzm.vercel.app/getorderedshopproducts`);
                 setOrderedProducts(response.data.orderedProducts);
                 //console.log(response.data.orderedProducts);
             } catch (error) {
@@ -60,7 +60,7 @@ const Orders = () => {
     const acceptOrder = async (productId) => {
         console.log(productId);
         try {
-            const response = await axios.post(`${URL}/acceptorder`, { productId });
+            const response = await axios.post(`https://auzm.vercel.app/acceptorder`, { productId });
             if (response.status === 200) {
                 setOrderedProducts(orderedProducts.filter(item => item._id !== productId));
             }

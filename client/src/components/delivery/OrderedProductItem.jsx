@@ -76,7 +76,7 @@ const OrderedProductItem=({ item, onDelivered })=>{
     }
     const handleDeliveredClick = async() => {
       try {
-        const response = await axios.post(`${URL}/deletefromorederedproducts`, { productId: item._id });
+        const response = await axios.post(`https://auzm.vercel.app/deletefromorederedproducts`, { productId: item._id });
         if (response.status === 200) {
             console.log('Item deleted successfully');
         }

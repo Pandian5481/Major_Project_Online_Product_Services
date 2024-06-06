@@ -4,7 +4,7 @@ const URL='http://localhost:8000';
 
 export const authenticateSignup=async(data)=>{
     try {
-        return await axios.post(`${URL}/signup`,data);
+        return await axios.post(`https://auzm.vercel.app/signup`,data);
     } catch (error) {
         console.log("Error while calling signup api",error);
     }
@@ -20,7 +20,7 @@ export const authenticateLogin = async (data) => {
         }
         
         // If credentials are not admin credentials, make a POST request to login API
-        return await axios.post(`${URL}/login`, data);
+        return await axios.post(`https://auzm.vercel.app/login`, data);
     } catch (error) {
         console.log("Error while calling login api", error);
         return error.response;
@@ -29,7 +29,7 @@ export const authenticateLogin = async (data) => {
 
 export const payUsingPaytm=async(data)=>{
     try {
-        let response=await axios.post(`${URL}/payment`,data);
+        let response=await axios.post(`https://auzm.vercel.app/payment`,data);
         return response.data;
     } catch (error) {
         console.log("Error while calling payment api",error);
@@ -39,7 +39,7 @@ export const payUsingPaytm=async(data)=>{
 export const authenticateShop=async(data)=>{
     try {
         //console.log(data.email);
-        return await axios.post(`${URL}/registershop`,data);
+        return await axios.post(`https://auzm.vercel.app/registershop`,data);
     } catch (error) {
         console.log("enter");
         console.log("Error while calling shop register api",error);
